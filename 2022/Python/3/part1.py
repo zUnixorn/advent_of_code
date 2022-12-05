@@ -11,11 +11,8 @@ def duplicate(items):
 
     return left.intersection(right).pop()
 
-with open("rucksack") as file:
-    lines = file.readlines()
-
-total = 0
-for line in lines:
-    total += priority(duplicate(line[:-1]))
-
-print(total)
+def solution(lines):
+    total = 0
+    for line in lines:
+        total += priority(duplicate(line[:-1]))
+    return total
