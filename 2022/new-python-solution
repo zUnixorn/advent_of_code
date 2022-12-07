@@ -57,7 +57,7 @@ mkdir $1
 cd $1
 
 if [ "$NODOWNLOAD" = "0" ]; then
-    curl --cookie "session=$TOKEN" -s -J -o "input" -w "%{http_code}" "$URL"
+    curl --cookie "session=$TOKEN" -s -J -o "input" "$URL"
 fi
 
 cat << EOF > main.py
